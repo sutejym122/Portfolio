@@ -284,7 +284,7 @@ const projects = [
   {
     name: "Expense split Calculator",
     description:
-      "Body Mass Index calculator. Based on the user’s weight and height it will calculate their body mass and give a piece of health advice depending on whether if they have eaten too many pies or if they need to eat more pies.",
+      "An expense split calculator for iOS, where a group of people can split their costs with aslo including the tip percentage",
     tags: [
       {
         name: "MVC Design Pattern",
