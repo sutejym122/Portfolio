@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -36,16 +36,18 @@ const Navbar = () => {
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center gap-2'
+          className='flex items-center gap-3'
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Sutej &nbsp;
-            <span className='sm:block hidden'> | Portfolio</span>
+          <div className='w-9 h-9 rounded-md bg-tertiary border border-line flex items-center justify-center'>
+            <span className='text-signal font-mono-ui font-bold text-[16px]'>S</span>
+          </div>
+          <p className='text-white-100 text-[16px] font-mono-ui font-medium cursor-pointer flex '>
+            sutej &nbsp;
+            <span className='sm:block hidden text-secondary'>/portfolio</span>
           </p>
         </Link>
 
@@ -54,8 +56,8 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title ? "text-signal" : "text-secondary"
+              } hover:text-white-100 text-[14px] font-mono-ui cursor-pointer transition-colors`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -74,14 +76,14 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl border border-line`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                  className={`font-mono-ui cursor-pointer text-[14px] ${
+                    active === nav.title ? "text-signal" : "text-secondary"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);

@@ -1,5 +1,4 @@
 import React from "react";
-import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -8,45 +7,30 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full' tiltMaxAngleX={25} tiltMaxAngleY={25} transitionSpeed={400}>
-
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
+  <motion.div
+    variants={fadeIn("up", "spring", index * 0.15, 0.6)}
+    className='group flex-1 min-w-[220px] border border-line rounded-lg p-6 bg-tertiary/40 hover:border-signal/50 transition-colors duration-300'
+  >
+    <img
+      src={icon}
+      alt={title}
+      className='w-10 h-10 object-contain mb-6 opacity-90 group-hover:opacity-100 transition-opacity'
+    />
+    <h3 className='text-white-100 text-[16px] font-semibold'>{title}</h3>
+  </motion.div>
 );
 
 const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
+        <p className={styles.sectionSubText}>introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-6 text-secondary text-[17px] max-w-[640px] leading-[30px]'
       >
         I'm a software engineer with an M.S. in Computer Science from SUNY
         Binghamton and a B.E. in Computer Science from VTU, working mainly
@@ -57,10 +41,10 @@ const About = () => {
         University. Outside of that, I build full-stack and mobile projects
         end-to-end — an observability platform, an LLM evaluation harness,
         and an AI-assisted iOS fitness app — to keep learning production
-        systems design. Let's collaborate and bring impactful ideas to life!
+        systems design.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-14 flex flex-wrap gap-4'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

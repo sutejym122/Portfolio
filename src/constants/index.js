@@ -131,8 +131,7 @@ const experiences = [
   {
     title: "Research Intern (OPRA Platform)",
     company_name: "Binghamton University, School of Computing",
-    icon: xcode,
-    iconBg: "#383E56",
+    initials: "BU",
     date: "Aug 2025 - Feb 2026",
     points: [
       "Contributed the MAPS feature to OPRA, an open-source Django platform for preference reporting, voting, and resource allocation: a PostGIS-backed Django REST Framework API serving district/election/map-layer data, including a management command importing real New Jersey congressional-district geometries.",
@@ -143,8 +142,7 @@ const experiences = [
   {
     title: "Software Developer",
     company_name: "Find Me",
-    icon: web,
-    iconBg: "#E6DEDD",
+    initials: "FM",
     date: "2023",
     points: [
       "Built a store/product search feature (search stores, search products across stores, view in-store aisle/product details) end-to-end with a React front end, Typesense, PostgreSQL, and MongoDB, including designing the full database schema.",
@@ -155,8 +153,7 @@ const experiences = [
   {
     title: "Programmer Analyst",
     company_name: "Cognizant Technology Solutions",
-    icon: docker,
-    iconBg: "#383E56",
+    initials: "CTS",
     date: "March 2022 - June 2023",
     points: [
       "Supported enterprise identity and ERP systems: Azure Active Directory access/identity troubleshooting and configuration validation on the IAM side, and JD Edwards production issue investigation (logs, SQL, data flows) on the ERP side.",
@@ -169,6 +166,7 @@ const experiences = [
 const projects = [
   {
     name: "TracePilot",
+    window_title: "tracepilot / dashboard.png",
     description:
       "Full-stack release intelligence and observability MVP: links services, releases, health checks, API latency/error metrics, rollback-readiness checklists, and incidents into one loop, so a degraded metric can be traced back to the release that likely caused it.",
     tags: [
@@ -191,6 +189,7 @@ const projects = [
   },
   {
     name: "Mirror",
+    window_title: "mirror / run.log",
     description:
       "LLM evaluation harness that treats prompts like code: a Python library and CLI that runs versioned test suites against a prompt, scores responses (structural, field-accuracy, and similarity scorers), and gates a run pass/fail against a saved baseline for CI-style regression detection.",
     tags: [
@@ -212,6 +211,7 @@ const projects = [
   },
   {
     name: "FitForge",
+    window_title: "fitforge / home.swift",
     description:
       "Native SwiftUI iOS fitness and nutrition coaching app with a FastAPI/OpenAI backend. Integrates HealthKit for activity data, generates AI meal plans from calorie/macro targets, and tracks streaks, achievements, and weekly insights via home-screen widgets.",
     tags: [
@@ -233,6 +233,7 @@ const projects = [
   },
   {
     name: "Forensic Face Sketch",
+    window_title: "forensic-face-sketch / sketch-builder.png",
     description:
       "Academic forensic sketch construction and face-recognition system: a JavaFX desktop app for assembling composite suspect sketches from facial components, storing records, and comparing sketches against stored images via AWS Rekognition.",
     tags: [
