@@ -1,0 +1,20 @@
+<svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d1836"/>
+      <stop offset="100%" stop-color="#151030"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="460" fill="url(#g3)"/>
+  <rect x="40" y="40" width="620" height="380" rx="24" fill="#0d0d1f" stroke="#915EFF" stroke-width="2" opacity="0.6"/>
+  <text x="80" y="100" font-family="Arial, sans-serif" font-size="28" fill="white" font-weight="bold">mirror run</text>
+  <text x="80" y="130" font-family="monospace" font-size="14" fill="#7CFC9A">✓ 34 passed</text>
+  <text x="80" y="155" font-family="monospace" font-size="14" fill="#FF6B6B">✗ 4 regressed</text>
+  <rect x="80" y="185" width="540" height="1" fill="#333"/>
+  <text x="80" y="215" font-family="monospace" font-size="13" fill="#aaa6c3">baseline score   0.91</text>
+  <text x="80" y="240" font-family="monospace" font-size="13" fill="#aaa6c3">current score    0.84  (-0.07)</text>
+  <text x="80" y="265" font-family="monospace" font-size="13" fill="#aaa6c3">gate: FAIL — regression threshold exceeded</text>
+  <rect x="80" y="300" width="540" height="90" rx="12" fill="#1d1836" stroke="#333"/>
+  <text x="100" y="330" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">LLM Evaluation Harness</text>
+  <text x="100" y="355" font-family="Arial, sans-serif" font-size="13" fill="#aaa6c3">CI-style regression gating for prompts</text>
+</svg>

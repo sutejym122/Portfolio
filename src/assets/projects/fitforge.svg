@@ -1,0 +1,22 @@
+<svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d1836"/>
+      <stop offset="100%" stop-color="#151030"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="460" fill="url(#g1)"/>
+  <rect x="40" y="40" width="620" height="380" rx="24" fill="#0d0d1f" stroke="#915EFF" stroke-width="2" opacity="0.6"/>
+  <circle cx="150" cy="140" r="46" fill="#915EFF" opacity="0.85"/>
+  <text x="150" y="152" font-family="Arial, sans-serif" font-size="34" fill="white" text-anchor="middle" font-weight="bold">FF</text>
+  <text x="220" y="130" font-family="Arial, sans-serif" font-size="30" fill="white" font-weight="bold">FitForge</text>
+  <text x="220" y="160" font-family="Arial, sans-serif" font-size="16" fill="#aaa6c3">SwiftUI + FastAPI/OpenAI</text>
+  <rect x="80" y="220" width="540" height="14" rx="7" fill="#2a2550"/>
+  <rect x="80" y="220" width="360" height="14" rx="7" fill="#915EFF"/>
+  <rect x="80" y="260" width="250" height="90" rx="14" fill="#1d1836" stroke="#333" stroke-width="1"/>
+  <text x="100" y="295" font-family="Arial, sans-serif" font-size="14" fill="#aaa6c3">Daily Calories</text>
+  <text x="100" y="325" font-family="Arial, sans-serif" font-size="26" fill="white" font-weight="bold">2,140 kcal</text>
+  <rect x="350" y="260" width="270" height="90" rx="14" fill="#1d1836" stroke="#333" stroke-width="1"/>
+  <text x="370" y="295" font-family="Arial, sans-serif" font-size="14" fill="#aaa6c3">Streak</text>
+  <text x="370" y="325" font-family="Arial, sans-serif" font-size="26" fill="white" font-weight="bold">12 days</text>
+</svg>

@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -15,17 +15,18 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_demo_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
+    <Tilt
+  tiltMaxAngleX={45}
+  tiltMaxAngleY={45}
+  scale={1}
+  transitionSpeed={450}
+  className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+>
+
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
@@ -33,17 +34,31 @@ const ProjectCard = ({
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
+          <div className='absolute inset-0 flex justify-end gap-2 m-3 card-img_hover'>
+            {live_demo_link && (
+              <div
+                onClick={() => window.open(live_demo_link, "_blank")}
+                className='black-gradient px-3 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              >
+                <p className='text-white text-[12px] font-semibold'>Live</p>
+              </div>
+            )}
+            {source_code_link ? (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              >
+                <img
+                  src={github}
+                  alt='source code'
+                  className='w-1/2 h-1/2 object-contain'
+                />
+              </div>
+            ) : (
+              <div className='black-gradient px-3 h-10 rounded-full flex justify-center items-center'>
+                <p className='text-white text-[12px] font-semibold'>Private</p>
+              </div>
+            )}
           </div>
         </div>
 

@@ -8,21 +8,21 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
-  nodejs,
-  mongodb,
+  python,
+  fastapi,
+  swift,
+  aws,
+  postgresql,
+  flask,
+  angularjs,
+  xcode,
   git,
-  figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  tracepilot,
+  fitforge,
+  forensic,
+  mirror,
 } from "../assets";
 
 export const navLinks = [
@@ -42,31 +42,35 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full Stack Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
+    title: "iOS App Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Backend & Cloud Developer",
+    icon: mobile,
+  },
+  {
+    title: "AI-Assisted Tooling",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Python",
+    icon: python,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "FastAPI",
+    icon: fastapi,
+  },
+  {
+    name: "Flask",
+    icon: flask,
   },
   {
     name: "JavaScript",
@@ -81,185 +85,173 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Angular",
+    icon: angularjs,
+  },
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Swift / SwiftUI",
+    icon: swift,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Xcode",
+    icon: xcode,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
+    name: "AWS",
+    icon: aws,
+  },
+  {
+    name: "Docker",
+    icon: docker,
   },
   {
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
 ];
 
+// NOTE: Find Me dates aren't confirmed yet — fill in the exact months below.
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Research Intern (OPRA Platform)",
+    company_name: "Binghamton University, School of Computing",
+    icon: xcode,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Aug 2025 - Feb 2026",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Contributed the MAPS feature to OPRA, an open-source Django platform for preference reporting, voting, and resource allocation: a PostGIS-backed Django REST Framework API serving district/election/map-layer data, including a management command importing real New Jersey congressional-district geometries.",
+      "Built the front end for MAPS with React and Leaflet: an interactive map with candidate-colored districts, a filterable district-selection sidebar, a vote-distribution panel, and per-district hover tooltips.",
+      "Worked within a pre-existing research codebase (Django 5, DRF, PostgreSQL/PostGIS, React, Channels/Redis) used by the department for course allocation research.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Software Developer",
+    company_name: "Find Me",
+    icon: web,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built a store/product search feature (search stores, search products across stores, view in-store aisle/product details) end-to-end with a React front end, Typesense, PostgreSQL, and MongoDB, including designing the full database schema.",
+      "Cut search latency by 40% by adding input debouncing (200-250ms) in front of the search API.",
+      "Built REST endpoints in Flask, including a `/search` route querying the Typesense product collection and a `/documents` route for indexed product data; contributed to observability integration work (OpenTelemetry, Promtail, Grafana Loki).",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Programmer Analyst",
+    company_name: "Cognizant Technology Solutions",
+    icon: docker,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "March 2022 - June 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Supported enterprise identity and ERP systems: Azure Active Directory access/identity troubleshooting and configuration validation on the IAM side, and JD Edwards production issue investigation (logs, SQL, data flows) on the ERP side.",
+      "Automated repetitive admin and validation work using PowerShell scripting, and handled integration/API tasks touching AWS S3 and Azure Blob Storage.",
+      "Converted from a 9-month internship to a full-time Programmer Analyst role; ~15 months total at the company.",
     ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "TracePilot",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Full-stack release intelligence and observability MVP: links services, releases, health checks, API latency/error metrics, rollback-readiness checklists, and incidents into one loop, so a degraded metric can be traced back to the release that likely caused it.",
     tags: [
       {
-        name: "react",
+        name: "fastapi",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "react-typescript",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "postgresql",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: tracepilot,
+    source_code_link: "https://github.com/sutejym122/TracePilot",
+    live_demo_link: "https://trace-pilot-two.vercel.app",
   },
   {
-    name: "Job IT",
+    name: "Mirror",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "LLM evaluation harness that treats prompts like code: a Python library and CLI that runs versioned test suites against a prompt, scores responses (structural, field-accuracy, and similarity scorers), and gates a run pass/fail against a saved baseline for CI-style regression detection.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "sqlite-sqlalchemy",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "ci-regression-gating",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: mirror,
+    source_code_link: null,
   },
   {
-    name: "Trip Guide",
+    name: "FitForge",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Native SwiftUI iOS fitness and nutrition coaching app with a FastAPI/OpenAI backend. Integrates HealthKit for activity data, generates AI meal plans from calorie/macro targets, and tracks streaks, achievements, and weekly insights via home-screen widgets.",
     tags: [
       {
-        name: "nextjs",
+        name: "swiftui",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "healthkit-widgetkit",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "fastapi-openai",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: fitforge,
+    source_code_link: "https://github.com/sutejym122/FitForge-iOS",
+  },
+  {
+    name: "Forensic Face Sketch",
+    description:
+      "Academic forensic sketch construction and face-recognition system: a JavaFX desktop app for assembling composite suspect sketches from facial components, storing records, and comparing sketches against stored images via AWS Rekognition.",
+    tags: [
+      {
+        name: "javafx",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "aws-rekognition",
+        color: "green-text-gradient",
+      },
+      {
+        name: "aws-s3",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: forensic,
+    source_code_link: "https://github.com/sutejym122/Forensic-Face-Sketch",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

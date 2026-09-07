@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt";
+import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -8,7 +8,8 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='xs:w-[250px] w-full' tiltMaxAngleX={25} tiltMaxAngleY={25} transitionSpeed={400}>
+
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -47,11 +48,16 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I'm a software engineer with an M.S. in Computer Science from SUNY
+        Binghamton and a B.E. in Computer Science from VTU, working mainly
+        across Python, FastAPI/Flask, React, Angular, and native SwiftUI/iOS
+        development. My background spans enterprise support and integration
+        work at Cognizant, full-stack feature development at Find Me, and
+        research engineering on a Django/PostGIS platform at Binghamton
+        University. Outside of that, I build full-stack and mobile projects
+        end-to-end — an observability platform, an LLM evaluation harness,
+        and an AI-assisted iOS fitness app — to keep learning production
+        systems design. Let's collaborate and bring impactful ideas to life!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
